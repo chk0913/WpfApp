@@ -10,6 +10,8 @@ namespace Giraffe
             int age = 30;
             double gpa = 3.2;
 
+            Console.WriteLine(phrase);
+
             Console.ReadLine();
         }
     }
