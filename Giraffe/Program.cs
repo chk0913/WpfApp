@@ -8,12 +8,11 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            Book book1 = new Book("Harry Potter", "JK Rowling", 400);
-            Book book2 = new Book("Loard Of the Rings", "Tolkein", 700);
+            Song holiday = new Song("Holiday", "green day", 200);
+            Console.WriteLine(Song.songCount);
+            Song kashmir = new Song("Kashmir", "Led Zeppelin", 150);
+            Console.WriteLine(kashmir.getSongCount());
 
-            book2.title = "The hobbits";
-
-            Console.WriteLine(book2.title);
             Console.ReadLine();
         }
     }
