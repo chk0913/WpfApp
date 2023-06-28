@@ -8,10 +8,11 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            Song holiday = new Song("Holiday", "green day", 200);
-            Console.WriteLine(Song.songCount);
-            Song kashmir = new Song("Kashmir", "Led Zeppelin", 150);
-            Console.WriteLine(kashmir.getSongCount());
+            Chef chef = new Chef();
+            chef.MakeSpecialDish();
+
+            ItalianChef italianChef = new ItalianChef();
+            italianChef.MakeSpecialDish();
 
             Console.ReadLine();
         }
