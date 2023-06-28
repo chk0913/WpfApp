@@ -8,20 +8,12 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            try
-            {
-                Console.Write("Enter a number: ");
-                int num1 = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Enter another number: ");
-                int num2 = Convert.ToInt32(Console.ReadLine());
+            Book book1 = new Book("Harry Potter", "JK Rowling", 400);
+            Book book2 = new Book("Loard Of the Rings", "Tolkein", 700);
 
-                Console.WriteLine(num1 / num2);
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            book2.title = "The hobbits";
 
+            Console.WriteLine(book2.title);
             Console.ReadLine();
         }
     }
