@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
 
-namespace WPF_LoginForm.ViewModel
+namespace WPF_LoginForm.Repositories
 {
-    public class ViewModelCommand : ICommand
+    internal class RepositoryBase
     {
-
     }
 }

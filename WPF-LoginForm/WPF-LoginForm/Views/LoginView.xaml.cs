@@ -44,5 +44,10 @@ namespace WPF_LoginForm.View
         {
 
         }
+
+        private void txtUser_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\LIGS\source\repos\WpfApp\WPF-LoginForm\WPF-LoginForm\App.xaml
-2-558252558
+3-1529573963
 
-9-1405576346
+14-1147093220
 13-1310406943
-MainWindow.xaml;View\LoginView.xaml;
+CustomControls\BindablePasswordBox.xaml;MainWindow.xaml;Views\LoginView.xaml;
 
 False
 
