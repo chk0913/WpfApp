@@ -1,33 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Security;
+using System.Security.Principal;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WPF_LoginForm.Models;
+using WPF_LoginForm.Repositories;
 
 namespace WPF_LoginForm.ViewModel
 {
-    public class LoginViewModel:ViewModelBase
+    public class LoginViewModel : ViewModelBase
     {
         //Fields
-        private string _userName;
+        private string _username;
         private SecureString _password;
         private string _errorMessage;
-        private bool _isViewvisable=true;
+        private bool _isViewvisible=true;
+
+        private IUserRepository userRepository;
 
         //Properties
-        public string UserName
+        public string Username
         {
             get
             {
-                return _userName;
+                return _username;
             }
 
             set
             {
-                _userName = value;
-                OnPropertyChanged(nameof(UserName));
+                _username = value;
+                OnPropertyChanged(nameof(Username));
             }
         }
 
@@ -60,17 +67,17 @@ namespace WPF_LoginForm.ViewModel
             }  
         }
 
-        public bool IsViewvisable
+        public bool IsViewvisible
         {
             get
             {
-                return _isViewvisable;
+                return _isViewvisible;
             }
 
             set
             {
-                _isViewvisable = value;
-                OnPropertyChanged(nameof(IsViewvisable));
+                _isViewvisible = value;
+                OnPropertyChanged(nameof(IsViewvisible));
             }
         }
 
@@ -83,16 +90,15 @@ namespace WPF_LoginForm.ViewModel
         //Constructor
         public LoginViewModel()
         {
+            userRepository = new UserRepository();
             LoginCommand = new ViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
             RecoverPasswordCommand = new ViewModelCommand(p => ExecuteRecoverPassCommand("", ""));
         }
 
-
-
         private bool CanExecuteLoginCommand(object obj)
         {
             bool validData;
-            if(string.IsNullOrWhiteSpace(UserName)|| UserName.Length<3||
+            if(string.IsNullOrWhiteSpace(Username)|| Username.Length<3||
                 Password==null ||  Password.Length<3)
                 validData = false;
             else
@@ -102,7 +108,17 @@ namespace WPF_LoginForm.ViewModel
 
         private void ExecuteLoginCommand(object obj)
         {
-
+            var isValidUser = userRepository.AuthenticateUser(new NetworkCredential(Username, Password));
+            if (isValidUser)
+            {
+                Thread.CurrentPrincipal = new GenericPrincipal(
+                    new GenericIdentity(Username), null);
+                IsViewvisible = false;
+            }
+            else
+            {
+                ErrorMessage = "* Invalid username or password";
+            }
         }
         private void ExecuteRecoverPassCommand(string username, string email)
         {

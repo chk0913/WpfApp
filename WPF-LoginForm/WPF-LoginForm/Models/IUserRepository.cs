@@ -16,7 +16,6 @@ namespace WPF_LoginForm.Models
         UserModel GetById(int id);
         UserModel GetByUsername(string username);
         IEnumerable<UserModel> GetByAll();
-
-
+        object GetByUsername(object name);
     }
 }

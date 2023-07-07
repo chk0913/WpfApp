@@ -1,4 +1,14 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\WPF-LoginForm",
+    "\\WPF-LoginForm\\WPF-LoginForm",
+    "\\WPF-LoginForm\\WPF-LoginForm\\Models",
+    "\\WPF-LoginForm\\WPF-LoginForm\\Properties",
+    "\\WPF-LoginForm\\WPF-LoginForm\\Repositories",
+    "\\WPF-LoginForm\\WPF-LoginForm\\ViewModels",
+    "\\WPF-LoginForm\\WPF-LoginForm\\Views"
+  ],
+  "SelectedNode": "\\WPF-LoginForm\\WPF-LoginForm\\Views\\LoginView.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

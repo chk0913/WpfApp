@@ -19,11 +19,11 @@
     </Window.DataContext>
 
     <Window.Resources>
-        <BooleanToVisibilityConverter x:Key="BooleanToVisiblity"/>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
     </Window.Resources>
 
     <Window.Visibility>
-        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisiblity}"/>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"/>
     </Window.Visibility>
     <Border CornerRadius="12">
         <Border.Background>
@@ -261,8 +261,7 @@
                     </StackPanel>
                 </StackPanel>
             </Grid>
-            
-    </Border>
+        </Border>
     </Border>
 
 </Window>

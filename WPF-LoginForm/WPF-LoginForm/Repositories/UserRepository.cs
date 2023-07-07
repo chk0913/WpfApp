@@ -12,6 +12,8 @@ namespace WPF_LoginForm.Repositories
 {
     public class UserRepository : RepositoryBase, IUserRepository
     {
+        private object username;
+
         public void Add(UserModel userModel)
         {
             throw new NotImplementedException();
@@ -52,6 +54,35 @@ namespace WPF_LoginForm.Repositories
         public UserModel GetByUsername(string username)
         {
             throw new NotImplementedException();
+        }
+
+        public object GetByUsername(object name)
+        {
+            UserModel user=null;
+            using (var connection = GetConnection())
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "select *from [User] where username=@username";
+                command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
+                using (var reader = command.ExecuteReader())
+                {
+                    if(reader.Read())
+                    {
+                        user = new UserModel()
+                        {
+                            Id = reader[0].ToString(),
+                            UserName = reader[1].ToString(),
+                            Password = string.Empty,
+                            Name = reader[3].ToString(),
+                            LastName = reader[4].ToString(),
+                            Email = reader[5].ToString(),
+                        };
+                    }
+                }
+            }
+            return user;
         }
 
         public void Remove(int id)

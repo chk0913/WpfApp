@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
-using System.Security.Policy;
 
 namespace WPF_LoginForm.ViewModel
 {
