@@ -27,7 +27,7 @@ namespace WPF_LoginForm.Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "select *from [User] where username=@username and [password]=@password";
+                command.CommandText = "select * from [User] where username=@username and [password]=@password";
                 command.Parameters.Add("@username", SqlDbType.NVarChar).Value = credential.UserName;
                 command.Parameters.Add("@password", SqlDbType.NVarChar).Value = credential.Password;
                 validUser = command.ExecuteScalar() == null ? false : true;
@@ -53,12 +53,7 @@ namespace WPF_LoginForm.Repositories
 
         public UserModel GetByUsername(string username)
         {
-            throw new NotImplementedException();
-        }
-
-        public object GetByUsername(object name)
-        {
-            UserModel user=null;
+            UserModel user = null;
             using (var connection = GetConnection())
             using (var command = new SqlCommand())
             {
@@ -68,12 +63,12 @@ namespace WPF_LoginForm.Repositories
                 command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
                 using (var reader = command.ExecuteReader())
                 {
-                    if(reader.Read())
+                    if (reader.Read())
                     {
                         user = new UserModel()
                         {
                             Id = reader[0].ToString(),
-                            UserName = reader[1].ToString(),
+                            Username = reader[1].ToString(),
                             Password = string.Empty,
                             Name = reader[3].ToString(),
                             LastName = reader[4].ToString(),
@@ -85,9 +80,15 @@ namespace WPF_LoginForm.Repositories
             return user;
         }
 
+        public object GetByUsername(object name)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int id)
         {
             throw new NotImplementedException();
         }
     }
 }
+      

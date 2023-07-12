@@ -40,3 +40,12 @@ C:\Users\LIGS\Source\Repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginF
 C:\Users\LIGS\Source\Repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\WPF-LoginForm.pdb
 C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\Views\MainView.g.cs
 C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\Views\MainView.baml
+C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\Styles\UIColors.baml
+C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\App.baml
+C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\Styles\ButtonStyles.baml
+C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\WPF-LoginForm.csproj.CopyComplete
+C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\Views\CustomerView.g.cs
+C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\Views\HomeView.g.cs
+C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\Views\CustomerView.baml
+C:\Users\LIGS\source\repos\chk0913\WpfApp\WPF-LoginForm\WPF-LoginForm\WPF-LoginForm\obj\Debug\Views\HomeView.baml

@@ -19,7 +19,7 @@ namespace WPF_LoginForm.ViewModel
         private string _username;
         private SecureString _password;
         private string _errorMessage;
-        private bool _isViewvisible=true;
+        private bool _isViewVisible=true;
 
         private IUserRepository userRepository;
 
@@ -67,17 +67,17 @@ namespace WPF_LoginForm.ViewModel
             }  
         }
 
-        public bool IsViewvisible
+        public bool IsViewVisible
         {
             get
             {
-                return _isViewvisible;
+                return _isViewVisible;
             }
 
             set
             {
-                _isViewvisible = value;
-                OnPropertyChanged(nameof(IsViewvisible));
+                _isViewVisible = value;
+                OnPropertyChanged(nameof(IsViewVisible));
             }
         }
 
@@ -98,7 +98,7 @@ namespace WPF_LoginForm.ViewModel
         private bool CanExecuteLoginCommand(object obj)
         {
             bool validData;
-            if(string.IsNullOrWhiteSpace(Username)|| Username.Length<3||
+            if(string.IsNullOrWhiteSpace(Username) || Username.Length<3 ||
                 Password==null ||  Password.Length<3)
                 validData = false;
             else
@@ -113,7 +113,7 @@ namespace WPF_LoginForm.ViewModel
             {
                 Thread.CurrentPrincipal = new GenericPrincipal(
                     new GenericIdentity(Username), null);
-                IsViewvisible = false;
+                IsViewVisible = false;
             }
             else
             {
