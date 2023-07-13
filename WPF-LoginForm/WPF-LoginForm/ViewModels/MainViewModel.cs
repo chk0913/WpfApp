@@ -10,9 +10,8 @@ using System.Windows;
 using System.Windows.Input;
 using WPF_LoginForm.Models;
 using WPF_LoginForm.Repositories;
-using WPF_LoginForm.ViewModel;
 
-namespace WPF_LoginForm.ViewModels
+namespace WPF_LoginForm.ViewModel
 {
     public class MainViewModel:ViewModelBase
     {
@@ -96,16 +95,16 @@ namespace WPF_LoginForm.ViewModels
 
         private void ExecuteShowHomeViewCommand(object obj)
         {
-            CurrentChildView = new CustomerViewModel();
-            Caption = "Customers";
-            Icon = IconChar.UserGroup;
+            CurrentChildView = new HomeViewModel();
+            Caption = "Dashboard";
+            Icon = IconChar.Home;
         }
 
         private void ExecuteShowCustomerViewCommand(object obj)
         {
-            CurrentChildView = new HomeViewModel();
-            Caption = "Dashboard";
-            Icon = IconChar.Home;
+            CurrentChildView = new CustomerViewModel();
+            Caption = "Customer";
+            Icon = IconChar.UserGroup;
         }
 
         private void LoadCurrentUserData()

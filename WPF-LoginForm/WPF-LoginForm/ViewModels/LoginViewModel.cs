@@ -73,7 +73,6 @@ namespace WPF_LoginForm.ViewModel
             {
                 return _isViewVisible;
             }
-
             set
             {
                 _isViewVisible = value;

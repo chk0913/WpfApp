@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 
-namespace WPF_LoginForm.ViewModels
+namespace WPF_LoginForm.ViewModel
 {
-    public class HomeViewModel : ViewBase
+    public class HomeViewModel : ViewModelBase
     {
     }
 }

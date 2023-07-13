@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WPF_LoginForm.ViewModel;
 
-namespace WPF_LoginForm.ViewModels
+namespace WPF_LoginForm.ViewModel
 {
     public class CustomerViewModel : ViewModelBase
     {
